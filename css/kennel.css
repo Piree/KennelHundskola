@@ -1,0 +1,595 @@
+header, nav, aside, body, time { display: block; }
+
+body {
+	background-color: #EBFAFF;
+	color: #330000;
+	font-family: Verdana, Arial, sans-serif;
+}
+
+body a {
+	text-decoration: none;
+}
+
+body ul { 
+	list-style-type: none;
+}
+
+body li { margin-bottom: 5px;}
+
+body a:link { color: #063F52; }
+
+body a:visited { color: #063F52; }
+
+body a:hover { color: #5BA8C2; }
+
+header {
+	background-image: url("http://grupp4.icsweb.se/U5/images/logga.jpg");
+	background-repeat: no-repeat;
+	background-size: 20% 150px;
+    background-position: right;
+    background-color: #063F52; 
+	color:#000000;
+	text-align: center;
+}
+
+h1 {
+	color: #ffffff;
+	height: 100px;
+	padding-top: 50px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+h2 {
+	text-transform: uppercase;
+	background-color: #134252;
+	color: #FFFFFF;
+	font-size: 1.2em;
+	border-bottom: 1px solid #000000;
+	padding: 5px 0 0 5px;
+	clear: left;
+}
+
+nav {
+	background-color: #082C38;
+	text-align: left;
+	float: left;
+	width: 15%;
+	font-weight: bold;
+	padding-top: 10px;
+}
+
+nav a {
+	text-decoration: none;
+	padding-bottom: 15px;
+	margin-left: -20px;
+}
+
+nav ul { list-style-type: none; }
+
+nav li { padding-bottom: 10px;}
+
+nav a:link { color: #ffffff; }
+
+nav a:visited { color: #ffffff; }
+
+nav a:hover { color: #85C2D6; }
+
+aside {
+	text-align: center;
+	background-color: #082C38;
+	float: right;
+	width: 18%;
+	font-weight: bold;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 1%;
+	padding-right: 1%;
+	position: relative;
+	color: #FFFFFF;
+
+}
+
+aside img {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+aside a {
+	text-decoration: none;
+	padding-bottom: 15px;
+}
+
+aside ul { list-style-type: none; }
+
+aside a:link { color: #C3ECFA; }
+
+aside a:visited { color: #C3ECFA; }
+
+aside a:hover { color: #4590A8; }
+
+time {
+	background-color: #063F52;
+	color: #FFFFFF;
+	font-size: .60em;
+	font-style: italic;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	clear: left;
+}
+
+time a:link { color: #ffffff; }
+
+time a:visited { color: #ffffff; }
+
+time a:hover { color: #85C2D6; }
+
+img {border-style: none;}
+
+table {
+	margin-right: auto;
+	margin-left: auto;
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	background-color: #FFFFFF;
+}
+
+td, th {
+	text-align:center; 
+    vertical-align:middle;
+	padding: 10px; 
+	/*border: 1px solid #3B7A8F;*/
+}
+
+tr:nth-of-type(odd) {
+	background-color: #D6F5FF;
+}
+
+label {
+	float: left;
+	display: block;
+	text-align: left;
+	width: 9em;
+	padding-right: 20px;
+}
+
+input, textarea {
+	display: block;
+	margin-bottom: 1em;
+}
+
+
+.floatleft {
+	float: left;
+	padding: 0 20px 20px 0;
+}
+
+.floatright { float: right; }
+
+.tablemydogs {
+	margin-bottom: 20px;
+	float: left;
+	width: 70%;
+	text-align: left;
+}
+
+.details {
+	padding-left: 20%;
+	padding-right: 20%;
+	overflow: auto;
+}
+
+.sameline {
+	float: left;
+	text-align: right;
+}
+
+.form {
+	margin-right: -80px;
+}
+
+#formAnswer {
+	float: left;
+}
+
+
+#error {
+	color:red;
+	font-weight: bold;
+}
+
+#tdthTeam {
+	text-align: left;
+	padding: 10px; 
+	border-style: none;
+}
+
+#tdth {
+	width: 25%;
+}
+
+#tdthTeam2 {
+	text-align: left;
+	width: 30%;
+	padding: 10px; 
+	border-style: none;
+}
+
+#white {
+	color: #FFFFFF;
+}
+
+#tr {
+	background-color: #FFFFFF;
+}
+
+#myUsernameLogin {
+	margin-top: 30px;
+	margin-left: 150px;
+}
+
+#myPasswordLogin {
+	margin-left: 150px;
+}
+
+#mySubmitLogin {
+	margin-left: 165px;
+}
+
+#myUsername {
+	float: left;
+	margin-left: 10px;
+}
+
+#myPassword {
+	float: left;
+}
+
+#mySubmit {
+	float: left;
+	margin-left: 10px;
+}
+
+#container {
+	display: flex;
+	overflow: hidden;
+	background-color: #082C38;
+	position: relative;
+	height: 100%;
+	clear: both;
+}
+
+
+#wrapper {
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #082C38;
+	min-width: 700px;
+	max-width: 1024px;
+	box-shadow: 5px 5px 5px #2e0000;
+
+}
+
+#left {
+	width: 100px;
+	height: 100%;
+	background-color: #0C2933;
+	clear: both;
+	float: left;
+	overflow: auto;
+	display: block;
+	position: relative;
+}
+
+#main {
+	width: 65%;
+	float: left;
+	padding: 10px 20px 30px 20px;
+	background-color: #ffffff;
+	color: #000000;
+	overflow: hidden;
+	position: relative;
+
+}
+
+#mainImg {
+	width: 65%;
+	float: left;
+	padding: 10px 20px 30px 20px;
+	background-color: #ffffff;
+	color: #000000;
+	overflow: hidden;
+	position: relative;
+
+}
+
+#main img {
+	float: left;
+	margin-right: 10px;
+}
+
+#underImage {
+	text-align: right;
+	clear: both;
+	padding-top: 10px;
+}
+
+
+
+#mobile { display: none; }
+
+#desktop {display: inline; }
+
+@media only screen and (max-width: 1024px) {
+
+	header {
+		background-image: none;
+	}
+
+	header img {
+		display: none;
+	}
+
+	body {
+		margin: 0;
+		background-image: none;
+	}
+
+	nav {
+		float: none;
+		width: 100%;
+		clear: both;
+		background-color: #0C2933;
+		padding: 10px 0 0px 1.5em;
+		margin-top: 0;
+	}
+
+	nav img {
+		display: none;
+	}
+
+	nav li { 
+		display: inline-block;
+		padding-bottom: none;
+	}
+
+	nav a {
+		padding: 1em;
+		font-size: 1.0em;
+		width: 8em;
+		font-weight: bold;
+		border-style: none;
+		text-decoration: none;
+	}
+
+	aside {
+		padding: 10px;
+	}
+
+	aside img {
+		display: none;
+	}
+
+	nav ul {
+		padding: 0;
+		margin: 0;
+	}
+
+	#wrapper {
+		width: auto;
+		min-width: 0;
+		margin: 0;
+		box-shadow: none;
+	}
+
+	#container {
+		display: block;
+		overflow: hidden;
+		background-color: #082C38;
+		position: relative;
+		height: 100%;
+		clear: both;
+	}
+
+	#container2 {
+		display: flex;
+		overflow: hidden;
+		background-color: #082C38;
+		position: relative;
+		height: 100%;
+		clear: both;
+	}
+
+	h1 {
+		background-position: center;
+		background-repeat: none;
+		height: 80px;
+	}
+
+	footer img {
+		display: none;
+	}
+
+	#main {
+		width: 71%;
+		padding: 2em;
+		margin: 0;
+		font-size: 90%;
+		min-height: 300px;
+	}
+
+	#mainImg {
+		width: 71%;
+		padding: 2em;
+		margin: 0;
+		font-size: 90%;
+		min-height: 300px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+
+	header img {
+		display: none;
+	}
+
+
+	nav {
+		padding-bottom: 10px;
+		padding-left: 0em;
+		text-align: center;
+	}
+
+	nav img {
+		display: none;
+	}
+
+	nav a {
+		display: block;
+		padding-left: 0px;
+		font-size: 1.3em;
+		padding: 0.2em;
+		font-weight: bold;
+		width: auto;
+		border-bottom-style: 1px solid #330000;
+	}
+	nav li {
+		display: block;
+		border-bottom: 1px solid white;
+		overflow: auto;
+		padding-bottom: 0.3em;
+		padding-top: 0.2em;
+	}
+
+	aside {
+		display: none;
+	}
+
+	aside img {
+		display: none;
+	}
+
+	time img {
+		display: none;
+	}
+
+
+
+	#last {
+		border-style: none;
+		padding-bottom: 0em;
+	}
+
+
+	table {
+		margin: auto;
+		width: 100%;
+		border-collapse: collapse;
+		border-spacing: 0;
+		background-color: #FFFFFF;
+	}
+
+	h2 {
+		padding: 0.5em 0 0 0.5em;
+		margin-right: 0.5em;
+	}
+
+	#container2 {
+		display: block;
+		overflow: hidden;
+		background-color: #FFFFFF;
+		position: relative;
+		height: 100%;
+		clear: both;
+	}
+
+	.tablemydogs {
+		margin: auto;
+		float: none;
+		width: 100%;
+		text-align: left;
+	}
+
+	.details {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.floatright {
+		display: none;
+	}
+
+	.floatleft {
+		padding-left: 0.5em;
+		padding-right: 0.5em;
+	}
+
+	.sameline {
+		float: none;
+	}
+
+	#myUsernameLogin {
+		margin-left: 0px;
+	}
+
+	#myPasswordLogin {
+		margin-left: 0px;
+	}
+
+	#mySubmitLogin {
+		margin-left: 0px;
+	}
+
+	#myUsername {
+		float: none;
+		margin-left: 0px;
+	}
+
+	#myPassword {
+		float: none;
+		margin-left: 0px;
+	}
+	
+	#mySubmit {
+		float: none;
+		margin-left: 0px;
+	}
+
+	#main {
+		width: 89%;
+	}
+
+	#mainImg {
+		width: 89%;
+		float: left;
+		padding: 2em;
+		background-color: #ffffff;
+		color: #000000;
+		overflow: hidden;
+		position: relative;
+		margin: 0;
+		font-size: 90%;
+	}
+
+	#main img {
+		display: none;
+	}
+
+	#container {
+		background-color: #FFFFFF;
+	}
+
+	#wrapper {
+		background-color: #FFFFFF;
+	}
+}
+
+	#mobile { display: inline; }
+	
+	#desktop { display: none; }
+
+}

@@ -1,0 +1,139 @@
+CREATE TABLE User
+	(username CHAR(50) NOT NULL,
+	password CHAR(40) NOT NULL,
+	PRIMARY KEY (username))
+	engine=innodb
+	CHARACTER SET=utf8;
+
+CREATE TABLE MainPost
+	(postID INT NOT NULL AUTO_INCREMENT,
+	postTitle VARCHAR(255),
+	postContent TEXT NOT NULL,
+	postDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	PRIMARY KEY (postID))
+	engine=innodb
+	CHARACTER SET=utf8;
+
+CREATE TABLE myDog
+	(mydID INT NOT NULL AUTO_INCREMENT,
+	myName VARCHAR(255),
+	myBirth DATE,
+	myBreedName VARCHAR(255),
+	myDescription TEXT,
+	myColor VARCHAR(255),
+	myHeight VARCHAR(255),
+	myWeight VARCHAR(255),
+	myHD VARCHAR(255),
+	myAD VARCHAR(255),
+	myTeeth VARCHAR(255),
+	myMH VARCHAR(255),
+	myBreeder VARCHAR(255),
+	PRIMARY KEY (mydID))
+	engine=innodb
+	CHARACTER SET=utf8;
+
+CREATE TABLE pedigreeDog
+	(pdID INT NOT NULL AUTO_INCREMENT,
+	pName VARCHAR(255),
+	pFather VARCHAR(255),
+	pMother VARCHAR(255),
+	PRIMARY KEY (pdID))
+	engine=innodb
+	CHARACTER SET=utf8;
+
+CREATE TABLE Litter
+	(litterName VARCHAR(255) NOT NULL,
+	litterDesc TEXT NOT NULL,
+	PRIMARY KEY (litterName))
+	engine=innodb
+	CHARACTER SET=utf8;
+
+CREATE TABLE Puppy
+	(puppyName VARCHAR(255) NOT NULL,
+	sex VARCHAR(255) NOT NULL,
+	price INT,
+	forSale VARCHAR(255),
+	litterName VARCHAR(255) NOT NULL,
+	PRIMARY KEY (puppyName),
+	FOREIGN KEY (litterName)
+	REFERENCES Litter(litterName)
+	ON DELETE CASCADE)
+	engine=innodb
+	CHARACTER SET=utf8;
+
+CREATE TABLE Course
+	(courseID INT NOT NULL AUTO_INCREMENT,
+	courseName VARCHAR(255) NOT NULL,
+	courseDate DATE NOT NULL,
+	courseTime TIME NOT NULL,
+	entryRequirements VARCHAR(255),
+	PRIMARY KEY (courseID))
+	engine=innodb
+	CHARACTER SET=utf8;
+
+CREATE TABLE Participant
+	(pName VARCHAR(255) NOT NULL,
+	pSex VARCHAR(255) NOT NULL,
+	age INT NOT NULL,
+	courseID INT NOT NULL,
+	PRIMARY KEY (pName, courseID),
+	FOREIGN KEY (courseID)
+	REFERENCES Course(courseID)
+	ON DELETE CASCADE)
+	engine=innodb
+	CHARACTER SET=utf8;
+
+CREATE TABLE GuestPost
+	(guestID INT NOT NULL AUTO_INCREMENT,
+	guestName VARCHAR(255),
+	guesTitle VARCHAR(255),
+	guestContent TEXT NOT NULL,
+	guestDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	answerID INT DEFAULT NULL,
+	PRIMARY KEY (guestID),
+	FOREIGN KEY (answerID)
+        REFERENCES GuestPost(guestID) 
+        ON DELETE CASCADE )
+	engine=innodb
+	CHARACTER SET=utf8;
+
+CREATE TABLE Message
+	(messageID INT NOT NULL AUTO_INCREMENT,
+	mName VARCHAR(255),
+	mEmail VARCHAR(255),
+	mContent TEXT NOT NULL,
+	mDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	PRIMARY KEY (messageID))
+	engine=innodb
+	CHARACTER SET=utf8;
+
+CREATE TABLE Advertisement
+	(adID INT NOT NULL AUTO_INCREMENT,
+	adName VARCHAR(255),
+	adDesc VARCHAR(255),
+	adDate DATE DEFAULT NULL,
+	PRIMARY KEY (adID))
+	engine=innodb
+	CHARACTER SET=utf8;
+
+CREATE TABLE Team
+	(teamname CHAR(20) NOT NULL,
+	division CHAR(20) NOT NULL,
+	PRIMARY KEY(teamname, division)
+	ON DELETE CASCADE)
+	engine=innodb
+	CHARACTER SET=utf8;
+
+CREATE TABLE Player
+	(firstname CHAR(20) NOT NULL,
+	lastname CHAR(20) NOT NULL,
+	teamname CHAR(20) NOT NULL,
+	division CHAR(20) NOT NULL,
+	sharpshooting INT NOT NULL,
+	skilltrack TIME default NULL,
+	PRIMARY KEY (firstname, lastname, teamname, division),
+	FOREIGN KEY (teamname, division)
+	REFERENCES Team(teamname, division)
+	ON DELETE CASCADE)
+	engine=innodb
+	CHARACTER SET=utf8;
